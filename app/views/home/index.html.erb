@@ -1,0 +1,18 @@
+<h1>Welcome to the Task Management App</h1>
+
+<nav>
+  <ul>
+    <li><%= link_to 'Users', users_path %></li>
+    <li><%= link_to 'Projects', projects_path %></li>
+    <li><%= link_to 'Tasks', tasks_path %></li>
+  </ul>
+</nav>
+
+<section>
+  <h2>Statistics</h2>
+  <ul>
+    <li>Total Users: <%= @total_users %></li>
+    <li>Total Projects: <%= @total_projects %></li>
+    <li>Total Tasks: <%= @total_tasks %></li>
+  </ul>
+</section>
