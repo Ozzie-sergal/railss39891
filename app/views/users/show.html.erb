@@ -1,10 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: green; font-weight: bold; padding: 10px;"><%= notice %></p>
 
 <%= render @user %>
 
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
+<div style="padding: 20px; text-align: center; max-width: 600px; margin: auto;">
 
-  <%= button_to "Destroy this user", @user, method: :delete %>
+  <p>
+    <%= link_to "Edit this user", edit_user_path(@user),
+                style: "color: white; background-color: #5e2a84; padding: 10px 15px; text-decoration: none; border-radius: 5px; margin-right: 10px;" %>
+
+    <%= link_to "Back to Users", users_path,
+                style: "color: white; background-color: #5e2a84; padding: 10px 15px; text-decoration: none; border-radius: 5px;" %>
+  </p>
+
+  <p style="margin-top: 15px;">
+    <%= button_to "Destroy this user", @user, method: :delete,
+                  style: "color: white; background-color: red; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer;" %>
+  </p>
+
 </div>

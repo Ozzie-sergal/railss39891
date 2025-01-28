@@ -1,16 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: green; font-weight: bold; padding: 10px;"><%= notice %></p>
 
 <% content_for :title, "Users" %>
 
-<h1>Users</h1>
+<h1 style="color: #5e2a84; text-align: center; padding: 10px 0;">Users</h1>
 
-<div id="users">
+<div id="users" style="padding: 20px; max-width: 800px; margin: auto;">
   <% @users.each do |user| %>
-    <%= render user %>
-    <p>
-      <%= link_to "Show this user", user %>
-    </p>
+    <div style="border: 2px solid #5e2a84; padding: 15px; margin-bottom: 15px; border-radius: 5px;">
+      <%= render user %>
+      <p>
+        <%= link_to "Show this user", user,
+                    style: "color: white; background-color: #5e2a84; padding: 8px 12px; text-decoration: none; border-radius: 5px; display: inline-block;" %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New user", new_user_path %>
+<div style="text-align: center; margin-top: 20px;">
+  <%= link_to "Create User", new_user_path,
+              style: "color: white; background-color: #5e2a84; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold; display: inline-block;" %>
+</div>

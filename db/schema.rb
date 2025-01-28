@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_01_27_183827) do
+ActiveRecord::Schema[7.2].define(version: 2025_01_28_172648) do
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.text "description"
@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_01_27_183827) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "tasks", "projects", on_delete: :cascade
   add_foreign_key "user_projects", "projects"
   add_foreign_key "user_projects", "users"
 end
