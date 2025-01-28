@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+this app was painfull to make  version after version something else failed
 
-Things you may want to cover:
+* first scaffolds not making views fixed
 
-* Ruby version
+* then database tweaking out fixed
 
-* System dependencies
+* this time round something about foreign key doesnt even want to delete the elements half of the time. I gave up on fixing that.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+other than that project should be working fine.
