@@ -1,16 +1,20 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: green; font-weight: bold; padding: 10px;"><%= notice %></p>
 
 <% content_for :title, "Projects" %>
 
-<h1>Projects</h1>
+<h1 style="color: #5e2a84; text-align: center; padding: 10px 0;">Projects</h1>
 
-<div id="projects">
+<div id="projects" style="padding: 20px; max-width: 800px; margin: auto;">
   <% @projects.each do |project| %>
-    <%= render project %>
-    <p>
-      <%= link_to "Show this project", project %>
-    </p>
+    <div style="border: 2px solid #5e2a84; padding: 15px; margin-bottom: 15px; border-radius: 5px;">
+      <%= render project %>
+      <p>
+        <%= link_to "Show this project", project, style: "color: white; background-color: #5e2a84; padding: 8px 12px; text-decoration: none; border-radius: 5px; display: inline-block;" %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New project", new_project_path %>
+<p style="text-align: center; margin-top: 20px;">
+  <%= link_to "New project", new_project_path, style: "color: white; background-color: #5e2a84; padding: 10px 15px; text-decoration: none; border-radius: 5px;" %>
+</p>

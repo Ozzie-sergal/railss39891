@@ -1,11 +1,12 @@
-<% content_for :title, "New project" %>
+<% content_for :title, "New Project" %>
 
-<h1>New project</h1>
+<h1 style="color: #5e2a84; text-align: center; padding: 10px 0;">New Project</h1>
 
-<%= render "form", project: @project %>
+<div style="max-width: 600px; margin: auto; padding: 20px;">
+  <%= render "form", project: @project %>
 
-<br>
-
-<div>
-  <%= link_to "Back to projects", projects_path %>
+  <p style="text-align: center; margin-top: 20px;">
+    <%= link_to "Back to projects", projects_path,
+                style: "color: white; background-color: #5e2a84; padding: 10px 15px; text-decoration: none; border-radius: 5px;" %>
+  </p>
 </div>

@@ -50,11 +50,12 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1 or /projects/1.json
   def destroy
     @project.destroy!
+    project = Project.find(params[:id])
 
-    respond_to do |format|
-      format.html { redirect_to projects_path, status: :see_other, notice: "Project was successfully destroyed." }
-      format.json { head :no_content }
-    end
+    project.tasks.destroy_all
+    project.destroy
+
+    redirect_to projects_path, notice: "Project deleted successfully"
   end
 
   private
@@ -63,7 +64,6 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
   def project_params
     params.require(:project).permit(:name, :description, user_ids: [])
   end

@@ -1,16 +1,23 @@
-<p style="color: green"><%= notice %></p>
+<p style="color: green; font-weight: bold; padding: 10px;"><%= notice %></p>
 
 <% content_for :title, "Tasks" %>
 
-<h1>Tasks</h1>
+<h1 style="color: #5e2a84; text-align: center; padding: 10px 0;">Tasks</h1>
 
-<div id="tasks">
+<div id="tasks" style="padding: 20px; max-width: 800px; margin: auto;">
   <% @tasks.each do |task| %>
-    <%= render task %>
-    <p>
-      <%= link_to "Show this task", task %>
-    </p>
+    <div style="border: 2px solid #5e2a84; padding: 15px; margin-bottom: 15px; border-radius: 5px;">
+      <%= render task %>
+      <p>
+        <%= link_to "Show this task", task,
+                    style: "color: white; background-color: #5e2a84; padding: 8px 12px; text-decoration: none; border-radius: 5px; display: inline-block;" %>
+      </p>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New task", new_task_path %>
+<div style="text-align: center; margin-top: 20px;">
+  <%= link_to "Create Task", new_task_path,
+              style: "color: white; background-color: #5e2a84; padding: 12px 20px; text-decoration: none; border-radius: 5px; font-size: 16px; font-weight: bold; display: inline-block;" %>
+</div>
+

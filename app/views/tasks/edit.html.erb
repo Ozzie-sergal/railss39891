@@ -1,12 +1,15 @@
-<% content_for :title, "Editing task" %>
+<% content_for :title, "Editing Task" %>
 
-<h1>Editing task</h1>
+<h1 style="color: #5e2a84; text-align: center; padding: 10px 0;">Editing Task</h1>
 
-<%= render "form", task: @task %>
+<div style="max-width: 600px; margin: auto; padding: 20px;">
+  <%= render "form", task: @task %>
 
-<br>
+  <p style="text-align: center; margin-top: 20px;">
+    <%= link_to "Show this task", @task,
+                style: "color: white; background-color: #5e2a84; padding: 10px 15px; text-decoration: none; border-radius: 5px; margin-right: 10px;" %>
 
-<div>
-  <%= link_to "Show this task", @task %> |
-  <%= link_to "Back to tasks", tasks_path %>
+    <%= link_to "Back to tasks", tasks_path,
+                style: "color: white; background-color: #5e2a84; padding: 10px 15px; text-decoration: none; border-radius: 5px;" %>
+  </p>
 </div>
